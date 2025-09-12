@@ -8,9 +8,14 @@ namespace libPizza
 {
     public class Pizza
     {
-        public string nom = "";
+        public string nom;
+        public double prix;
 
-        public Pizza(string Nom) => nom = Nom;
+        public Pizza(string Nom, double Prix)
+        {
+            nom = Nom;
+            prix = Prix;
+        }
         public string GetNomPizza()
         {
             return nom;

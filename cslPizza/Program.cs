@@ -6,9 +6,9 @@ internal class Program
         Client cl1 = new Client("5 square de Blois", "95380", "Berri", "Bilal", "+33782935428", "Louvres");
         Client cl2 = new Client("6 square de Blois", "95380", "Berri2", "Bilal2", "+33756965756", "Louvres");
 
-        Pizza p1 = new Pizza("Reine");
-        Pizza p2 = new Pizza("Calzone");
-        Pizza p3 = new Pizza("Margarita");
+        Pizza p1 = new Pizza("Reine", 5.8);
+        Pizza p2 = new Pizza("Calzone", 6);
+        Pizza p3 = new Pizza("Margarita", 4.6);
 
         Console.WriteLine(cl1.nom);
         Console.WriteLine(p1.GetNomPizza());
@@ -27,6 +27,7 @@ internal class Program
         
         g.AjouterNouveauClient("3 rue de Paris", "95380", "Pozqrejz", "Oifoiezr", "+33734657656", "Louvres");
         g.AjouterPizza(p3, 2);
+        g.AjouterNouvellePizza("AAA", 666);
         
         Console.WriteLine(co1.ToString());
         Console.WriteLine(g.AfficherCommande(2));

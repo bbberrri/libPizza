@@ -30,9 +30,9 @@ namespace libPizza
             Client cl = new Client(adresse, codePostal, nom, prenom, telephone, ville);
             mesClients.Add(cl);
         }
-        public void AjouterNouvelPizza(string nom)
+        public void AjouterNouvellePizza(string nom, int prix)
         {
-            Pizza p = new Pizza(nom);
+            Pizza p = new Pizza(nom, prix);
             mesPizzas.Add(p);
         }
         public void AjouterPizza(Pizza pizza, int numCommande)
