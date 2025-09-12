@@ -25,13 +25,18 @@ namespace libPizza
         {
             mesPizzas.Add(pizza);
         }
+        public int GetQuantiteTotalePizzas()
+        {
+            return mesPizzas.Count();
+        }
         public int GetNumCommande()
         {
             return numCommande;
         }
         public override string ToString()
         {
-            return $"Commande #{numCommande} pour {monClient.nom} le {dateCommande:dd/MM/yyyy} à {dateCommande:t} pour {mesPizzas.Count()} items";
+            return $"Commande #{numCommande} pour {monClient.nom} le {dateCommande:dd/MM/yyyy} à {dateCommande:t}" +
+                $" pour {mesPizzas.Count()} items";
         }
     }
 }
