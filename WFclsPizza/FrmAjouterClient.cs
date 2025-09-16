@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using libPizza;
 
 namespace WFclsPizza
 {
@@ -15,6 +16,8 @@ namespace WFclsPizza
         public FrmAjouterClient()
         {
             InitializeComponent();
+            Gestion g = new Gestion();
+            //g.AjouterNouveauClient(txtAdresse, txtCp, txtNom, txtPrenom, txtTel, txtVille);
         }
     }
 }

@@ -37,26 +37,30 @@
             btnEffacer = new Button();
             lblMtPizza = new Label();
             grbClients = new GroupBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            txtPrenom = new TextBox();
-            txtTel = new TextBox();
-            txtCp = new TextBox();
-            txtVille = new TextBox();
-            txtAdresse = new TextBox();
-            cmbNom = new ComboBox();
             chkEmporter = new CheckBox();
+            cmbNom = new ComboBox();
+            txtAdresse = new TextBox();
+            txtVille = new TextBox();
+            txtCp = new TextBox();
+            txtTel = new TextBox();
+            txtPrenom = new TextBox();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
             groupBox1 = new GroupBox();
-            btnCommander = new Button();
-            label7 = new Label();
+            btnAjouter = new Button();
+            nudPizza = new NumericUpDown();
+            cmbPizza = new ComboBox();
             label8 = new Label();
+            label7 = new Label();
+            btnCommander = new Button();
             toolStrip1.SuspendLayout();
             grbClients.SuspendLayout();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudPizza).BeginInit();
             SuspendLayout();
             // 
             // lstCommClt
@@ -146,103 +150,6 @@
             grbClients.TabStop = false;
             grbClients.Text = "Client";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(15, 19);
-            label1.Name = "label1";
-            label1.Size = new Size(34, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Nom";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(15, 51);
-            label2.Name = "label2";
-            label2.Size = new Size(49, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Prénom";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(15, 86);
-            label3.Name = "label3";
-            label3.Size = new Size(55, 15);
-            label3.TabIndex = 2;
-            label3.Text = "Télépone";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(165, 19);
-            label4.Name = "label4";
-            label4.Size = new Size(48, 15);
-            label4.TabIndex = 3;
-            label4.Text = "Adresse";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(165, 51);
-            label5.Name = "label5";
-            label5.Size = new Size(70, 15);
-            label5.TabIndex = 4;
-            label5.Text = "Code Postal";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(165, 86);
-            label6.Name = "label6";
-            label6.Size = new Size(29, 15);
-            label6.TabIndex = 5;
-            label6.Text = "Ville";
-            // 
-            // txtPrenom
-            // 
-            txtPrenom.Location = new Point(70, 48);
-            txtPrenom.Name = "txtPrenom";
-            txtPrenom.Size = new Size(80, 23);
-            txtPrenom.TabIndex = 6;
-            // 
-            // txtTel
-            // 
-            txtTel.Location = new Point(70, 83);
-            txtTel.Name = "txtTel";
-            txtTel.Size = new Size(80, 23);
-            txtTel.TabIndex = 7;
-            // 
-            // txtCp
-            // 
-            txtCp.Location = new Point(238, 51);
-            txtCp.Name = "txtCp";
-            txtCp.Size = new Size(80, 23);
-            txtCp.TabIndex = 8;
-            // 
-            // txtVille
-            // 
-            txtVille.Location = new Point(238, 86);
-            txtVille.Name = "txtVille";
-            txtVille.Size = new Size(80, 23);
-            txtVille.TabIndex = 9;
-            // 
-            // txtAdresse
-            // 
-            txtAdresse.Location = new Point(238, 16);
-            txtAdresse.Name = "txtAdresse";
-            txtAdresse.Size = new Size(80, 23);
-            txtAdresse.TabIndex = 10;
-            // 
-            // cmbNom
-            // 
-            cmbNom.FormattingEnabled = true;
-            cmbNom.Location = new Point(68, 16);
-            cmbNom.Name = "cmbNom";
-            cmbNom.Size = new Size(91, 23);
-            cmbNom.TabIndex = 11;
-            // 
             // chkEmporter
             // 
             chkEmporter.AutoSize = true;
@@ -253,8 +160,113 @@
             chkEmporter.Text = "À emporter";
             chkEmporter.UseVisualStyleBackColor = true;
             // 
+            // cmbNom
+            // 
+            cmbNom.FormattingEnabled = true;
+            cmbNom.Location = new Point(68, 16);
+            cmbNom.Name = "cmbNom";
+            cmbNom.Size = new Size(91, 23);
+            cmbNom.TabIndex = 11;
+            // 
+            // txtAdresse
+            // 
+            txtAdresse.Location = new Point(238, 16);
+            txtAdresse.Name = "txtAdresse";
+            txtAdresse.ReadOnly = true;
+            txtAdresse.Size = new Size(80, 23);
+            txtAdresse.TabIndex = 10;
+            // 
+            // txtVille
+            // 
+            txtVille.Location = new Point(238, 86);
+            txtVille.Name = "txtVille";
+            txtVille.ReadOnly = true;
+            txtVille.Size = new Size(80, 23);
+            txtVille.TabIndex = 9;
+            // 
+            // txtCp
+            // 
+            txtCp.Location = new Point(238, 51);
+            txtCp.Name = "txtCp";
+            txtCp.ReadOnly = true;
+            txtCp.Size = new Size(80, 23);
+            txtCp.TabIndex = 8;
+            // 
+            // txtTel
+            // 
+            txtTel.Location = new Point(70, 83);
+            txtTel.Name = "txtTel";
+            txtTel.ReadOnly = true;
+            txtTel.Size = new Size(80, 23);
+            txtTel.TabIndex = 7;
+            // 
+            // txtPrenom
+            // 
+            txtPrenom.Location = new Point(70, 48);
+            txtPrenom.Name = "txtPrenom";
+            txtPrenom.ReadOnly = true;
+            txtPrenom.Size = new Size(80, 23);
+            txtPrenom.TabIndex = 6;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(165, 86);
+            label6.Name = "label6";
+            label6.Size = new Size(29, 15);
+            label6.TabIndex = 5;
+            label6.Text = "Ville";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(165, 51);
+            label5.Name = "label5";
+            label5.Size = new Size(70, 15);
+            label5.TabIndex = 4;
+            label5.Text = "Code Postal";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(165, 19);
+            label4.Name = "label4";
+            label4.Size = new Size(48, 15);
+            label4.TabIndex = 3;
+            label4.Text = "Adresse";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(15, 86);
+            label3.Name = "label3";
+            label3.Size = new Size(55, 15);
+            label3.TabIndex = 2;
+            label3.Text = "Télépone";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(15, 51);
+            label2.Name = "label2";
+            label2.Size = new Size(49, 15);
+            label2.TabIndex = 1;
+            label2.Text = "Prénom";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(15, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(34, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Nom";
+            // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnAjouter);
+            groupBox1.Controls.Add(nudPizza);
+            groupBox1.Controls.Add(cmbPizza);
             groupBox1.Controls.Add(label8);
             groupBox1.Controls.Add(label7);
             groupBox1.Location = new Point(152, 169);
@@ -262,16 +274,40 @@
             groupBox1.Size = new Size(324, 96);
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
-            groupBox1.Text = "groupBox1";
+            groupBox1.Text = "Commande";
             // 
-            // btnCommander
+            // btnAjouter
             // 
-            btnCommander.Location = new Point(152, 271);
-            btnCommander.Name = "btnCommander";
-            btnCommander.Size = new Size(324, 30);
-            btnCommander.TabIndex = 7;
-            btnCommander.Text = "Commander";
-            btnCommander.UseVisualStyleBackColor = true;
+            btnAjouter.Location = new Point(160, 67);
+            btnAjouter.Name = "btnAjouter";
+            btnAjouter.Size = new Size(75, 23);
+            btnAjouter.TabIndex = 15;
+            btnAjouter.Text = "Ajouter";
+            btnAjouter.UseVisualStyleBackColor = true;
+            // 
+            // nudPizza
+            // 
+            nudPizza.Location = new Point(238, 38);
+            nudPizza.Name = "nudPizza";
+            nudPizza.Size = new Size(39, 23);
+            nudPizza.TabIndex = 14;
+            // 
+            // cmbPizza
+            // 
+            cmbPizza.FormattingEnabled = true;
+            cmbPizza.Location = new Point(31, 37);
+            cmbPizza.Name = "cmbPizza";
+            cmbPizza.Size = new Size(119, 23);
+            cmbPizza.TabIndex = 13;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(238, 19);
+            label8.Name = "label8";
+            label8.Size = new Size(53, 15);
+            label8.TabIndex = 1;
+            label8.Text = "Quantité";
             // 
             // label7
             // 
@@ -282,14 +318,14 @@
             label7.TabIndex = 0;
             label7.Text = "Pizza";
             // 
-            // label8
+            // btnCommander
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(254, 19);
-            label8.Name = "label8";
-            label8.Size = new Size(53, 15);
-            label8.TabIndex = 1;
-            label8.Text = "Quantité";
+            btnCommander.Location = new Point(152, 271);
+            btnCommander.Name = "btnCommander";
+            btnCommander.Size = new Size(324, 30);
+            btnCommander.TabIndex = 7;
+            btnCommander.Text = "Commander";
+            btnCommander.UseVisualStyleBackColor = true;
             // 
             // FrmCommander
             // 
@@ -304,13 +340,14 @@
             Controls.Add(toolStrip1);
             Controls.Add(lstCommClt);
             Name = "FrmCommander";
-            Text = "FrmCommander";
+            Text = "Commander";
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             grbClients.ResumeLayout(false);
             grbClients.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudPizza).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -342,5 +379,8 @@
         private Label label8;
         private Label label7;
         private Button btnCommander;
+        private ComboBox cmbPizza;
+        private Button btnAjouter;
+        private NumericUpDown nudPizza;
     }
 }
