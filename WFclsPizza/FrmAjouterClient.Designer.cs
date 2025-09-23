@@ -147,6 +147,7 @@
             button.TabIndex = 12;
             button.Text = "Valider";
             button.UseVisualStyleBackColor = true;
+            button.Click += button_Click_1;
             // 
             // FrmAjouterClient
             // 
@@ -168,6 +169,7 @@
             Controls.Add(label1);
             Name = "FrmAjouterClient";
             Text = "AjouterClient";
+            Load += FrmAjouterClient_Load;
             ResumeLayout(false);
             PerformLayout();
         }

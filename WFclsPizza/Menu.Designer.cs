@@ -49,12 +49,14 @@
             commanderToolStripMenuItem.Name = "commanderToolStripMenuItem";
             commanderToolStripMenuItem.Size = new Size(86, 20);
             commanderToolStripMenuItem.Text = "Commander";
+            commanderToolStripMenuItem.Click += commanderToolStripMenuItem_Click;
             // 
             // ajouterClientToolStripMenuItem
             // 
             ajouterClientToolStripMenuItem.Name = "ajouterClientToolStripMenuItem";
             ajouterClientToolStripMenuItem.Size = new Size(89, 20);
             ajouterClientToolStripMenuItem.Text = "AjouterClient";
+            ajouterClientToolStripMenuItem.Click += ajouterClientToolStripMenuItem_Click;
             // 
             // ajouterPizzaToolStripMenuItem
             // 
@@ -71,6 +73,7 @@
             MainMenuStrip = menuStrip;
             Name = "Menu";
             Text = "Form1";
+            Load += Menu_Load;
             menuStrip.ResumeLayout(false);
             menuStrip.PerformLayout();
             ResumeLayout(false);
